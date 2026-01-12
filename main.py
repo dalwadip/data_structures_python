@@ -1,5 +1,5 @@
 # make list of items, ordered, changeable
-print("Lists and their functions/methods")
+print("Lists and their functions/methods: ")
 person1 = ["Harry", "Potter", "Potter"]
 person2 = ["Hermione", "Granger"]
 # look through important python list methods, and use them below
@@ -38,7 +38,7 @@ print(person1)
 print()
 
 # make a set, unordered, changeable
-print("Sets and their functions/methods")
+print("Sets and their functions/methods: ")
 fruits = {"banana", "apple", "cherry"}
 veggies = {"carrot", "pepper", "corn"}
 # look through set methods
@@ -96,8 +96,50 @@ student = {
     "is_kind": False
 }
 
-# make a tuple
-sports = ("soccer", "basketball", "tennis")
+# look via dictionary methods
+print("Dictionaries and their functions/methods: ")
+#from_keys = student.fromkeys({"name", "age"}) # returns a dictionary with the specified keys and value, param must have, dictionary
+#print(from_keys)
 
+get = student.get("name") # returns the value of the specified key, param must have key
+print(get)
+
+items = student.items() # returns a list containing a tuple for each key value pair
+print(items)
+
+keys = student.keys() # returns a list containing the dictionary's keys
+print(keys)
+
+student.pop("is_kind") # removes the element with the specified key, param must have key
+print(student)
+
+copy = student.copy() # returns copy of dictionary
+print(copy)
+
+student.popitem() # removes the last inserted key-value pair
+print(student)
+
+#default = student.setdefault("age") # returns the value of the specified key. If the key does not exist: insert the key, with the specified value, param must have key
+#print(default)
+
+#student.update() # updates the dictionary with the specified key-value pairs
+#print(student)
+
+values = student.values() # returns a list of all the values in the dictionary
+print(values)
+
+student.clear() # clears dictionary
+print(student)
+print()
+
+# make a tuple
+sports = ("soccer", "basketball", "tennis", "soccer")
+# look via tuple functions/methods
+print("Tuples and their functions/methods: ")
+count = sports.count("soccer") # returns the number of times a specified value occurs in a tuple
+print(count)
+
+index = sports.index("tennis") # searches the tuple for a specified value and returns the position of where it was found
+print(index)
 
 
