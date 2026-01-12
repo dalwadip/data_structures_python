@@ -1,4 +1,5 @@
-# make list of items
+# make list of items, ordered, changeable
+print("Lists and their functions/methods")
 person1 = ["Harry", "Potter", "Potter"]
 person2 = ["Hermione", "Granger"]
 # look through important python list methods, and use them below
@@ -34,9 +35,59 @@ print(person1) #same here
 
 person1.clear() # clears the list
 print(person1)
+print()
 
-# make a set
+# make a set, unordered, changeable
+print("Sets and their functions/methods")
 fruits = {"banana", "apple", "cherry"}
+veggies = {"carrot", "pepper", "corn"}
+# look through set methods
+fruits.add("orange") # adds element to set
+print(fruits)
+
+copy = fruits.copy() # returns copy of set
+print(copy)
+
+# diff = fruits.difference(veggies) # returns set containing differences between 2 or more sets
+# print(diff)
+#
+# fruits.difference_update(veggies) # removes the items in this set that are also included in another
+# print(fruits)
+
+fruits.discard("apple") # removes specified item
+print(fruits)
+
+# inter = fruits.intersection(veggies) # returns set, that is intersection of 2 other sets
+# print(inter)
+#
+# fruits.intersection_update(veggies) # removes the items in this set that are not present in other
+# print(fruits)
+#
+# disjoint = fruits.isdisjoint({"apple"}) # returns if two sets have an intersection or not (param must be a set)
+# print(disjoint)
+#
+# sub = fruits.issubset({"banana"}) # returns True if all items of this set is present in another set (param must be a set)
+# print(sub)
+#
+# sup = fruits.issuperset({"orange"}) # returns True if all items of another set is present in this set (param must be a set)
+# print(sup)
+
+fruits.remove("cherry") # removes specified element
+print(fruits)
+
+fruits.pop() # removes a RANDOM element from the set, random b/c it's a set
+#**NOTE: set is unordered, so pops random element, which could be same item as remove, could put remove before pop
+print(fruits)
+
+# union = fruits.union(veggies) # return a set containing the union of sets
+# print(union)
+#
+# fruits.update(veggies) # update the set with the union of this set and others
+# print(fruits)
+
+fruits.clear() # clears set
+print(fruits)
+print()
 
 # make a dictionary
 student = {
